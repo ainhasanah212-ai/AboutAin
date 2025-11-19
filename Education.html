@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ain Hasanah | Education</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fff6fa 0%, #ffe9ef 100%);
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    nav {
+      background-color: #ffe4e9;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      color: #d63384;
+      background-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    footer {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 25px;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .highlight {
+      font-style: italic;
+      color: #d63384;
+      margin-top: 20px;
+      font-size: 1.2em;
+      padding: 15px;
+      background: rgba(237, 161, 173, 0.1);
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    /* ✨ Timeline Styling ✨ */
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+      padding-left: 30px;
+      border-left: 3px solid #d63384;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .timeline-item::before {
+      content: "🎓";
+      position: absolute;
+      left: -25px;
+      top: 0;
+      font-size: 1.5em;
+      color: #d63384;
+      background: #fff6fa;
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      color: #d63384;
+      font-size: 1.3em;
+    }
+
+    .timeline-item p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    .timeline-item:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Table for Achievements */
+    table {
+      margin: 40px auto;
+      border-collapse: collapse;
+      width: 80%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #d63384;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffe4e9;
+      color: #d63384;
+    }
+
+    tr:hover {
+      background-color: #fff0f4;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin: 5px;
+        font-size: 0.9em;
+      }
+      
+      header h1 {
+        font-size: 2.2em;
+      }
+      
+      table {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i>My Education Journey</i></h1>
+    <p><i>"Learning never exhausts the mind." – Leonardo da Vinci</i></p>
+  </header>
+
+  <nav>
+    <a href="ain.html"><i class="fas fa-home"></i> Home</a>
+    <a href="Myself.html"><i class="fas fa-user"></i> Myself</a>
+    <a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="Hobbies.html"><i class="fas fa-heart"></i> Hobbies</a>
+    <a href="Practical Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section>
+    <h2>Educational Background</h2>
+    <p class="highlight">Here's a glimpse into my academic milestones and learning experiences 📚</p>
+
+    <!-- 🎓 Timeline Section -->
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Primary School</h3>
+        <p><strong>SK Yan Kechil </strong> (2010 – 2015)</p>
+        <p>Completed UPSR with excellent results and active participation in co-curricular activities.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Secondary School</h3>
+        <p><strong>Sekolah Menengah Integrasi Teras Islam Darul Izzah</strong> (2016 – 2022)</p>
+        <p>Achieved SPM qualification and served as a library assistant, nurturing my passion for information organization.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Tertiary Education</h3>
+        <p><strong>Universiti Teknologi MARA (UiTM), Branch Kedah</strong> (2023 – Present)</p>
+        <p>Pursuing a Diploma in Information Management. Actively involved in academic projects and digital archiving coursework.</p>
+      </div>
+    </div>
+
+    
+    <h2>Academic Achievements</h2>
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Institution</th>
+        <th>Achievement</th>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>UiTM Kedah</td>
+        <td>CGPA:3.28 (Semester 1)</td>
+      </tr>
+      <tr>
+        <td>2022</td>
+        <td>Sekolah Menengah Integrasi Teras Islam Darul Izzah</td>
+        <td>Top 3 Best Result SPM</td>
+      <tr>
+        <td>2019</td>
+        <td>Sekolah Menengah Integrasi Teras Islam Darul Izzah</td>
+        <td>Top 3 Academic Excellence Award</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    © 2025 Ain | UiTM Student Project | Made with <i class="fas fa-heart" style="color: #fff;"></i>
+  </footer>
+
+</body>
+</html>

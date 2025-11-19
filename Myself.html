@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ain Hasanah | About Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff6fa 0%, #ffe9ef 100%);
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    nav {
+      background-color: #ffe4e9;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      color: #d63384;
+      background-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .floating-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .floating-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(237, 161, 173, 0.2);
+    }
+
+    .floating-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+    }
+
+    .floating-box:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .floating-box:active {
+      transform: translateY(-5px) scale(1.01);
+    }
+
+    .box-icon {
+      font-size: 2.5em;
+      color: #eda1ad;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .box-title {
+      color: #d63384;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .box-content {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .box-content p {
+      margin-bottom: 15px;
+    }
+
+    .box-content strong {
+      color: #d63384;
+    }
+
+    .about-photo {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .about-photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #eda1ad;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+
+    .about-photo img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 25px;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .quote i {
+      color: #eda1ad;
+      font-size: 1.2em;
+    }
+
+    /* Floating Images Section */
+    .floating-images-section {
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      color: #d63384;
+      font-size: 2em;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .floating-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .floating-img-container {
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .floating-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: all 0.5s ease;
+      border: 3px solid #eda1ad;
+      cursor: pointer;
+    }
+
+    .floating-img:hover {
+      transform: translateY(-15px) rotate(2deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .img-caption {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(237, 161, 173, 0.9);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .floating-img-container:hover .img-caption {
+      opacity: 1;
+      bottom: -35px;
+    }
+
+    /* Different floating animations for each image */
+    .float-1 {
+      animation: float1 6s ease-in-out infinite;
+    }
+
+    .float-2 {
+      animation: float2 7s ease-in-out infinite 1s;
+    }
+
+    .float-3 {
+      animation: float3 5s ease-in-out infinite 0.5s;
+    }
+
+   
+    @keyframes float1 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(1deg); }
+    }
+
+    @keyframes float2 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-25px) rotate(-1deg); }
+    }
+
+    @keyframes float3 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-18px) rotate(2deg); }
+    }
+
+  
+    @media (max-width: 768px) {
+      .floating-boxes {
+        grid-template-columns: 1fr;
+      }
+      
+      .floating-images {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      
+      nav a {
+        margin: 5px;
+        font-size: 0.9em;
+      }
+
+      .floating-img {
+        height: 150px;
+      }
+    }
+
+    /* Animation for floating boxes */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .floating-box:nth-child(odd) {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-box:nth-child(even) {
+      animation: float 7s ease-in-out infinite 1s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i>Ain's Story</i></h1>
+    <p>"A Journey Beyond Books"</p>
+  </header>
+
+  <nav>
+    <a href="ain.html"><i class="fas fa-home"></i> Home</a>
+    <a href="Myself.html"><i class="fas fa-user"></i> Myself</a>
+    <a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="Hobbies.html"><i class="fas fa-heart"></i> Hobbies</a>
+    <a href="Practical Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="about-photo">
+      <img src="C:\Users\ASUS\Documents\photo_2025-11-11_13-22-49.jpg" alt="Nurul Ain Hasanah Photo">
+    </div>
+
+    <div class="quote">
+      <i>"The expert in anything was once a beginner"</i>
+    </div>
+
+    <div class="floating-boxes">
+      <div class="floating-box">
+        <div class="box-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <h3 class="box-title">Personal Details</h3>
+        <div class="box-content">
+          <p><strong>Full Name:</strong> Nurul Ain Hasanah Binti Azhar</p>
+          <p><strong>From:</strong> Yan, Kedah</p>
+          <p><strong>Birthday:</strong> 21th February</p>
+          <p><strong>Age:</strong> 20 Years Old</p>
+        </div>
+      </div>
+
+      <div class="floating-box">
+        <div class="box-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <h3 class="box-title">Education</h3>
+        <div class="box-content">
+          <p><strong>Current:</strong> Diploma in Information Management</p>
+          <p><strong>Institution:</strong> Universiti Teknologi MARA (UiTM)</p>
+          <p><strong>Branch:</strong> Kedah</p>
+          <p><strong>Year:</strong> Last Semester</p>
+        </div>
+      </div>
+
+      <div class="floating-box">
+        <div class="box-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3 class="box-title">Hobbies & Interests</h3>
+        <div class="box-content">
+          <p><strong>Reading:</strong> Fiction, Self-help, Horror</p>
+          <p><strong>Creative Writing:</strong> Short stories </p>
+          <p><strong>Photography:</strong> Nature and videography</p>
+          <p><strong>Learning:</strong> Always exploring new topics that feels interesting to me</p>
+        </div>
+      </div>
+
+      <div class="floating-box">
+        <div class="box-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3 class="box-title">Practical Experience</h3>
+        <div class="box-content">
+          <p><strong>Library Assistant:</strong> Pejabat Tanah Dan Daerah Yan (2025)</p>
+          <p><strong>Position:</strong> Clerk</p>
+          <p><strong>Experience:</strong> Open Outside Booth in Guar</p>
+          <p><strong>Duration of internship:</strong> 8 weeks</p>
+        </div>
+      </div>
+
+      <div class="floating-box">
+        <div class="box-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3 class="box-title">Skills</h3>
+        <div class="box-content">
+          <p><strong>Technical:</strong>Microsoft Office, Cataloging</p>
+          <p><strong>Soft Skills:</strong> Communication, Problem-solving, Teamwork</p>
+          <p><strong>Languages:</strong> Malay (Native), English (Fluent)</p>
+          <p><strong>Research:</strong> Information retrieval and analysis</p>
+        </div>
+      </div>
+
+      <div class="floating-box">
+        <div class="box-icon">
+          <i class="fas fa-book-reader"></i>
+        </div>
+        <h3 class="box-title">My Passion</h3>
+        <div class="box-content">
+          <p>Reading is my favorite activity, and I am always excited to discover new books. Reading is more than a hobby for me, it's a way to feed my curiosity and imagination.</p>
+          <p>I believe that every book has something to teach us, and I enjoy sharing my reading experiences with others through book reviews and discussions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Images Section -->
+    <div class="floating-images-section">
+      <h2 class="section-title">My Journey in Pictures</h2>
+      <div class="floating-images">
+        <div class="floating-img-container">
+          <img src="C:\Users\ASUS\Documents\intern.jpg" 
+               alt="Study Time" class="floating-img float-1">
+          <div class="img-caption">Internship</div>
+        </div>
+        <div class="floating-img-container">
+          <img src="C:\Users\ASUS\Documents\Birthday.jpg" 
+               alt="Campus Life" class="floating-img float-2">
+          <div class="img-caption">Birthday Celebration</div>
+        </div>
+                     
+    </div>
+  </div>
+</div>
+
+  <footer>
+    © 2025 Ain | UiTM Student Project | Made with <i class="fas fa-heart" style="color: #fff;"></i>
+  </footer>
+
+  <script>
+    // Add interactive effects to boxes
+    document.querySelectorAll('.floating-box').forEach(box => {
+      box.addEventListener('mouseenter', function() {
+        this.style.zIndex = '10';
+      });
+      
+      box.addEventListener('mouseleave', function() {
+        this.style.zIndex = '1';
+      });
+      
+      // For touch devices
+      box.addEventListener('touchstart', function() {
+        this.classList.add('active');
+      });
+      
+      box.addEventListener('touchend', function() {
+        this.classList.remove('active');
+      });
+    });
+
+    // Add click effects to floating images
+    document.querySelectorAll('.floating-img').forEach(img => {
+      img.addEventListener('click', function() {
+        this.style.transform = 'scale(1.1) rotate(5deg)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html> 

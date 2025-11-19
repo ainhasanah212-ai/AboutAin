@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ain Hasanah | Hobbies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fff6fa 0%, #ffe9ef 100%);
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    nav {
+      background-color: #ffe4e9;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      color: #d63384;
+      background-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro {
+      background-color: #ffe4e9;
+      padding: 25px;
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+      margin-bottom: 30px;
+    }
+
+    /* ------------------ POLAROID IMAGE STYLE ------------------ */
+    .polaroid-grid {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 15px;
+      width: 230px;
+      border-radius: 5px;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+      position: relative;
+      transition: transform 0.3s;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    /* Tapes */
+    .polaroid::before {
+      content: "";
+      width: 70px;
+      height: 18px;
+      background: #e8906f;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+      border-radius: 3px;
+    }
+
+    /* Different rotation for each picture */
+    .p1 { transform: rotate(-5deg); }
+    .p2 { transform: rotate(3deg); }
+    .p3 { transform: rotate(-2deg); }
+    .p4 { transform: rotate(4deg); }
+
+    /* Hover straighten effect */
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.05);
+      box-shadow: 0 12px 18px rgba(0,0,0,0.2);
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .polaroid h3 {
+      margin-top: 10px;
+      color: #d63384;
+    }
+
+    .polaroid p {
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+
+    /* Spotify Player Section */
+    .music-player-section {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .music-player-container {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: 0 auto;
+      border-left: 5px solid #eda1ad;
+    }
+
+    .music-player-title {
+      color: #d63384;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .spotify-player {
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .spotify-player:hover {
+      transform: scale(1.02);
+    }
+
+    .music-description {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 25px;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .music-player-container {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin: 5px;
+        font-size: 0.9em;
+      }
+      
+      header h1 {
+        font-size: 2.2em;
+      }
+      
+      .polaroid-grid {
+        gap: 15px;
+      }
+      
+      .polaroid {
+        width: 200px;
+      }
+
+      .music-player-container {
+        margin: 0 15px;
+        padding: 20px;
+      }
+
+      .spotify-player {
+        width: 100%;
+        height: 352px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .spotify-player {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i>My Hobbies</i></h1>
+    <p>"Little things that bring big happiness."</p>
+  </header>
+
+  <nav>
+    <a href="ain.html"><i class="fas fa-home"></i> Home</a>
+    <a href="Myself.html"><i class="fas fa-user"></i> Myself</a>
+    <a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="Hobbies.html"><i class="fas fa-heart"></i> Hobbies</a>
+    <a href="Practical Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section>
+    <div class="intro">
+      <p>In my free time, I enjoy activities that help me relax, grow, and express myself creatively.</p>
+    </div>
+
+    <!-- POLAROID GALLERY -->
+    <div class="polaroid-grid">
+
+      <div class="polaroid p1">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Listening to Music">
+        <h3>🎧 Listening to Music</h3>
+        <p>I love relaxing with soft pop and lo-fi music.</p>
+      </div>
+
+      <div class="polaroid p2">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Reading">
+        <h3>📚 Reading</h3>
+        <p>Books inspire me and let me explore new ideas.</p>
+      </div>
+
+      <div class="polaroid p3">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Photography">
+        <h3>📸 Photography</h3>
+        <p>Capturing memories through photos is my favourite thing.</p>
+      </div>
+
+      <div class="polaroid p4">
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0" alt="Baking">
+        <h3>🍰 Baking</h3>
+        <p>I enjoy baking desserts for family and friends.</p>
+      </div>
+
+    </div>
+
+    <!-- Spotify Music Player Section -->
+    <div class="music-player-section">
+      <div class="music-player-container">
+        <h2 class="music-player-title">🎵 My Favorite Playlist</h2>
+        <iframe 
+          id="spotifyPlayer"
+          src="https://open.spotify.com/embed/artist/5pnSNZZRyYViu2n58Zlw1J?utm_source=generator&theme=0" 
+          width="100%" 
+          height="352" 
+          frameborder="0" 
+          allowtransparency="true" 
+          allow="encrypted-media"
+          class="spotify-player">
+        </iframe>
+        <p class="music-description">
+          This is one of my favorite artists whose music I often listen to while studying, 
+          relaxing, or just enjoying some quiet time. Their melodies are perfect for creating 
+          a peaceful atmosphere.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Ain | UiTM Student Project | Made with <i class="fas fa-heart" style="color: #fff;"></i>
+  </footer>
+
+  <script>
+    // Add click effects to polaroid images
+    document.querySelectorAll('.polaroid').forEach(polaroid => {
+      polaroid.addEventListener('click', function() {
+        this.style.transform = 'rotate(0deg) scale(1.1)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 300);
+      });
+    });
+
+    // Add hover effect to music player
+    const spotifyPlayer = document.getElementById('spotifyPlayer');
+    spotifyPlayer.addEventListener('mouseenter', function() {
+      this.style.boxShadow = '0 12px 35px rgba(0,0,0,0.2)';
+    });
+    
+    spotifyPlayer.addEventListener('mouseleave', function() {
+      this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+    });
+  </script>
+
+</body>
+</html>

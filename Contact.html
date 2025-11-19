@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ain Hasanah | Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fff6fa 0%, #ffe9ef 100%);
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    nav {
+      background-color: #ffe4e9;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      color: #d63384;
+      background-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .intro {
+      background-color: #ffe4e9;
+      padding: 25px;
+      border-radius: 15px;
+      animation: fadeIn 1.5s ease-in-out;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      animation: fadeInUp 1.5s ease-in-out;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-left: 5px solid #eda1ad;
+    }
+
+    .contact-info h3 {
+      color: #d63384;
+      margin-bottom: 20px;
+      font-size: 1.4em;
+      text-align: center;
+    }
+
+    .contact-info p {
+      line-height: 1.8;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: rgba(237, 161, 173, 0.1);
+      border-radius: 8px;
+    }
+
+    .contact-info strong {
+      color: #d63384;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 15px;
+      color: #d63384;
+      font-size: 2em;
+      text-decoration: none;
+      transition: transform 0.3s, color 0.3s;
+      background: white;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #fff;
+      background: #d63384;
+    }
+
+    .contact-form {
+      background-color: #ffe4e9;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 40px;
+      animation: fadeInUp 2s ease-in-out;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .contact-form h3 {
+      color: #d63384;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1.4em;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #d63384;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0;
+      border-radius: 10px;
+      border: 2px solid #eda1ad;
+      font-family: "Poppins", sans-serif;
+      font-size: 1em;
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #d63384;
+      box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.1);
+    }
+
+    .contact-form button {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-weight: bold;
+      display: block;
+      margin: 20px auto 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .contact-form button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .contact-form button:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
+
+    .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
+
+    footer {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 25px;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin: 5px;
+        font-size: 0.9em;
+      }
+      
+      header h1 {
+        font-size: 2.2em;
+      }
+      
+      section {
+        padding: 20px 15px;
+      }
+      
+      .social-icons a {
+        margin: 0 10px;
+        font-size: 1.8em;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i>Contact Me</i></h1>
+    <p>"Let's Connect and Create Together 🌸"</p>
+  </header>
+
+  <nav>
+    <a href="ain.html"><i class="fas fa-home"></i> Home</a>
+    <a href="Myself.html"><i class="fas fa-user"></i> Myself</a>
+    <a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="Hobbies.html"><i class="fas fa-heart"></i> Hobbies</a>
+    <a href="Practical Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section>
+    <div class="intro">
+      <p>Thank you for visiting my website! Feel free to reach out for collaboration, questions, or just to say hello.</p>
+    </div>
+
+    <div class="contact-info">
+      <h3>📧 Contact Information</h3>
+      <p><strong>Email:</strong> ainhasanah212@gmail.com</p>
+      <p><strong>Phone:</strong> +60 19-9144 382</p>
+      <p><strong>Current Location:</strong> Kolej Murni 2 , Universiti Teknologi MARA</p>
+      <p><strong>Home Location:</strong>Lot 13, Belakang Sekolah Menegah Agama Fauzi, 06900 Yan, Kedah.</p>
+
+
+      <div class="social-icons">
+        <a href="mailto:ainhasanah212@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/60199144382" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/ainazhar.r?igsh=cGZoaXU1MHlwcWV1" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ain-azhar-8377aa363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>📝 Send Me a Message</h3>
+      <form id="messageForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" id="submitBtn">
+          <span id="btnText">Send Message <i class="fas fa-paper-plane"></i></span>
+          <span id="btnLoading" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Sending...
+          </span>
+        </button>
+      </form>
+      
+      <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. I'll get back to you soon!
+      </div>
+      
+      <div class="error-message" id="errorMessage">
+        <i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact me directly via email.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ain | UiTM Student Project | Made with <i class="fas fa-heart" style="color: #fff;"></i>
+  </footer>
+
+  <script>
+    document.getElementById('messageForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const btnLoading = document.getElementById('btnLoading');
+      const successMessage = document.getElementById('successMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      
+      // Show loading state
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'inline';
+      
+      // Hide previous messages
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      // Simulate sending message (in a real implementation, you would use a server-side script)
+      setTimeout(() => {
+        // For demonstration purposes, we'll simulate both success and failure randomly
+        const isSuccess = Math.random() > 0.3; // 70% success rate for demo
+        
+        if (isSuccess) {
+          successMessage.style.display = 'block';
+          document.getElementById('messageForm').reset();
+        } else {
+          errorMessage.style.display = 'block';
+        }
+        
+        // Reset button state
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+      }, 2000);
+    });
+    
+    // Direct email functionality
+    document.querySelector('a[href="mailto:ainhasanah212@gmail.com"]').addEventListener('click', function(e) {
+      // You can add additional tracking or analytics here
+      console.log('Email link clicked');
+    });
+    
+    // WhatsApp functionality
+    document.querySelector('a[href="https://wa.me/60199144382"]').addEventListener('click', function(e) {
+      // You can add additional tracking or analytics here
+      console.log('WhatsApp link clicked');
+    });
+  </script>
+
+</body>
+</html>

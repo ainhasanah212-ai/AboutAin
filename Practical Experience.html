@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ain Hasanah | Practical Experience</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fff6fa 0%, #ffe9ef 100%);
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    nav {
+      background-color: #ffe4e9;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      color: #d63384;
+      background-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .intro {
+      background-color: #ffe4e9;
+      padding: 25px;
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+      text-align: center;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .experience-box {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-top: 40px;
+      animation: fadeInUp 1.2s ease-in-out;
+      border-left: 5px solid #eda1ad;
+    }
+
+    .experience-box h3 {
+      color: #d63384;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    .experience-box ul {
+      line-height: 1.8;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .experience-box li {
+      margin-bottom: 8px;
+    }
+
+    .skills-box {
+      background-color: #ffe4e9;
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 40px;
+      animation: fadeInUp 1.5s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .skills-box h3 {
+      color: #d63384;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    .skills-box ul {
+      line-height: 1.8;
+      list-style-type: "✨ ";
+      padding-left: 20px;
+    }
+
+    .photo-box {
+      margin-top: 40px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .photo-box img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      border: 3px solid #eda1ad;
+    }
+
+    .photo-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .reflection {
+      margin-top: 40px;
+      font-style: italic;
+      color: #d63384;
+      background-color: #ffe4e9;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      animation: fadeInUp 2s ease-in-out;
+      font-size: 1.1em;
+      line-height: 1.6;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: linear-gradient(to right, #eda1ad, #f8b6c0);
+      color: white;
+      padding: 25px;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin: 5px;
+        font-size: 0.9em;
+      }
+      
+      header h1 {
+        font-size: 2.2em;
+      }
+      
+      section {
+        padding: 20px 15px;
+      }
+      
+      .photo-box img {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i>My Practical Experience</i></h1>
+    <p>"Learning Beyond the Classroom"</p>
+  </header>
+
+  <nav>
+    <a href="ain.html"><i class="fas fa-home"></i> Home</a>
+    <a href="Myself.html"><i class="fas fa-user"></i> Myself</a>
+    <a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="Hobbies.html"><i class="fas fa-heart"></i> Hobbies</a>
+    <a href="Practical Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <section>
+    <div class="intro">
+      <p>My practical training was an exciting opportunity to apply what I've learned at UiTM into a real working environment. It gave me the confidence, experience, and understanding of how records are managed in actual organizations.</p>
+    </div>
+
+    <div class="experience-box">
+      <h3>📍 Pejabat Tanah Dan Daerah Yan</h3>
+      <p><strong>Duration:</strong> 27 July – 18 September 2025</p>
+      <p><strong>Position:</strong> Clerk</p>
+      <p><strong>Responsibilities :</strong></p>
+      <ul>
+        <li>Assisted in using the i-Hasil system to check land tax and enter data into Microsoft Excel.</li>
+        <li>Performed verification, recording, and updating of land title numbers using the SPTB Web system.</li>
+        <li>Maintained and organized metadata in digital record systems.</li>
+        <li>Supported daily administrative and clerical duties within the records department.</li>
+      </ul>
+    </div>
+
+    <div class="skills-box">
+      <h3>💡 Skills Gained</h3>
+      <ul>
+        <li>Records and Information Management</li>
+        <li>Microsoft Office and Digital Filing</li>
+        <li>Communication and Teamwork</li>
+        <li>Time Management and Problem-Solving</li>
+      </ul>
+    </div>
+
+    <div class="photo-box">
+      <img src="C:\Users\ASUS\Downloads\pejabat tanah.jpeg" alt="Pejabat Tanah Dan Daerah Yan" class="pdt-img">	
+      <p><i>Pejabat Tanah dan Daerah Yan.</i></p>
+	<p>the place where I completed my internship</p>
+    </div>
+
+    <div class="reflection">
+      "This experience taught me to be disciplined, organized, and adaptable. I realized that managing records is not only about keeping data safe, it's about preserving knowledge for the future."
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ain | UiTM Student Project | Made with <i class="fas fa-heart" style="color: #fff;"></i>
+  </footer>
+
+</body>
+</html>

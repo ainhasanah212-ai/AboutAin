@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ain Hasanah | Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: "Poppins", sans-serif;
+			background: linear-gradient(135deg, #fff6fa 0%, #ffe9ef 100%);
+			color: #333;
+			min-height: 100vh;
+			overflow-x: hidden;
+			text-align: center;
+		}
+
+		header {
+			background: linear-gradient(to right, #eda1ad, #f8b6c0);
+			color: white;
+			padding: 40px 20px;
+			text-align: center;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			position: relative;
+			overflow: hidden;
+		}
+
+		header::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30 Z" fill="white"/></svg>');
+		}
+
+		header h1 {
+			margin: 0;
+			font-size: 2.8em;
+			letter-spacing: 1px;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+			position: relative;
+		}
+
+		header p {
+			font-style: italic;
+			margin-top: 10px;
+			font-size: 1.2em;
+			position: relative;
+		}
+
+		nav {
+			background-color: #ffe4e9;
+			padding: 15px;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+		}
+
+		nav a {
+			color: #333;
+			text-decoration: none;
+			margin: 0 15px;
+			font-weight: bold;
+			transition: all 0.3s ease;
+			padding: 8px 16px;
+			border-radius: 20px;
+		}
+
+		nav a:hover {
+			color: #d63384;
+			background-color: rgba(255,255,255,0.7);
+			transform: translateY(-2px);
+		}
+
+		section {
+			padding: 40px 20px;
+			max-width: 800px;
+			margin: auto;
+		}
+
+		footer {
+			background: linear-gradient(to right, #eda1ad, #f8b6c0);
+			color: white;
+			padding: 25px;
+			margin-top: 60px;
+			text-align: center;
+			font-size: 0.9em;
+		}
+
+		.highlight {
+			font-style: italic;
+			color: #d63384;
+			margin-top: 20px;
+			font-size: 1.2em;
+			padding: 15px;
+			background: rgba(237, 161, 173, 0.1);
+			border-radius: 10px;
+			display: inline-block;
+		}
+
+		@media (max-width: 768px) {
+			nav a {
+				margin: 5px;
+				font-size: 0.9em;
+			}
+			
+			header h1 {
+				font-size: 2.2em;
+			}
+		}
+	</style>
+</head>
+<body>	
+
+	<header>
+		<h1><i>The Learning Lane Of AIN</i></h1>
+		<p>Learning, Growing And Creating My Own Path</p>
+	</header>
+
+	<nav>
+		<a href="ain.html"><i class="fas fa-home"></i> Home</a>
+		<a href="Myself.html"><i class="fas fa-user"></i> Myself</a>
+		<a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+		<a href="Hobbies.html"><i class="fas fa-heart"></i> Hobbies</a>
+		<a href="Practical Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+		<a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+	</nav>
+
+	<section>
+		<h2>Welcome!</h2>
+		
+		<p>Hi, Assalamualaikum! I'm Ain, a student at Universiti Teknologi MARA (UiTM) pursuing a Diploma in Information Management. This website represents my journey as a student, showcasing my projects, reflections, and achievements along the way.</p>
+
+		<p class="highlight">"Change is the end result of all true learning."&#9748;</p>
+	</section>
+
+	<footer>
+		© 2025 Ain | UiTM Student Project | Made with <i class="fas fa-heart" style="color: #fff;"></i>
+	</footer> 
+
+</body>
+</html>
